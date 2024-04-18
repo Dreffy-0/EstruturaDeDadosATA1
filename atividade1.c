@@ -25,9 +25,8 @@ int main() {
         exit(1);
     }
 
-    //Descarta a primeira linha do arquivo de entrada antes de executar o loop;
     getAlunos(&alunos, entrada);
-    // Escreve o cabeçalho no arquivo de saída
+    
     fprintf(saida, "NOME, NOTA, SITUACAO\n");
 
     while (getAlunos(&alunos, entrada) != EOF) {
