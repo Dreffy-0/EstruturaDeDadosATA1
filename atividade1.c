@@ -55,12 +55,11 @@ const char* defineSituacao(float media) {
 
 int getAlunos(struct Aluno *aluno, FILE *entrada) {
     char linha[256];
-    if (fgets(linha, sizeof(linha), entrada) == NULL) // Lê uma linha do arquivo
-        return EOF; // Retorna EOF se chegou ao final do arquivo
+    if (fgets(linha, sizeof(linha), entrada) == NULL)
+        return EOF;
 
-    // Extrai os valores da linha utilizando sscanf
     sscanf(linha, "%[^,],%[^,],%[^,],%f,%f", aluno->nome, aluno->tel, aluno->curso, &aluno->nota1, &aluno->nota2);
     
-    return 1; // Retorna 1 para indicar que os dados foram lidos com sucesso
+    return 1;
 }
 
